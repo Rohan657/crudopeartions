@@ -1,19 +1,19 @@
-package com.tcs.demo1.controller;
+package com.tcs.demo1.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+
+@Entity
 public class User{
+	@Id
 	private int id;
 	private String name;
 	private String address;
 	private int phone;
 	private String email;
-	public User(int id, String name, String address, int phone, String email) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.address = address;
-		this.phone = phone;
-		this.email = email;
-	}
+
 	public int getId() {
 		return id;
 	}
