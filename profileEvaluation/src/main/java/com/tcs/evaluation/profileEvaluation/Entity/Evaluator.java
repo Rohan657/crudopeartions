@@ -6,6 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Evaluator {
 	@Id
+	
     private int evalid;
 	private String evalname;
 	private Long mobileno;

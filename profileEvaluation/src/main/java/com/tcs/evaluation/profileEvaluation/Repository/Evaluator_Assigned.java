@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.tcs.evaluation.profileEvaluation.Entity.Evaluatorassigned;
 @Repository
-public interface Evaluator_Assigned extends JpaRepository<Evaluatorassigned, BigInteger> {
+public interface Evaluator_Assigned extends JpaRepository<Evaluatorassigned, Long> {
 	
      List<Evaluatorassigned> findByevalid(int id);
 	

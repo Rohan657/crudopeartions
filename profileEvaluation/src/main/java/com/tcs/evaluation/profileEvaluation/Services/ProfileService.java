@@ -13,11 +13,9 @@ public class ProfileService {
 	@Autowired
 	ProfileRepo repo;
 	
-	public List<Profile> getAllProfile(){
-		return repo.findAll();
-	}
+	
 	Long value = 10000L;
-	public String postProfile(Profile profile){
+	public String addProfile(Profile profile){
 		if (profile.getId() == null) {
 			profile.setId(++this.value);
 		}

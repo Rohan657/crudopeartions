@@ -2,9 +2,10 @@ package com.tcs.evaluation.profileEvaluation.Controller;
 
 import com.tcs.evaluation.profileEvaluation.Entity.Evaluatorassigned;
 import com.tcs.evaluation.profileEvaluation.Entity.Profile;
+import com.tcs.evaluation.profileEvaluation.Entity.Profilestatus;
 
 import java.util.List;
-
+import com.tcs.evaluation.profileEvaluation.Services.LeadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tcs.evaluation.profileEvaluation.Repository.Evaluator_Assigned;
 import com.tcs.evaluation.profileEvaluation.Repository.ProfileRepo;
+import com.tcs.evaluation.profileEvaluation.Repository.StatusRepo;
+import com.tcs.evaluation.profileEvaluation.Services.LeadService;
 import com.tcs.evaluation.profileEvaluation.Services.ProfileService;
 
 @RestController
@@ -23,7 +26,7 @@ public class LeadController {
 	@Autowired
 	ProfileRepo repo;
 	@Autowired
-	ProfileService service;
+	LeadService service;
 	@Autowired
 	Evaluator_Assigned evalRepo;
 	
@@ -34,11 +37,10 @@ public class LeadController {
 	
 	@PutMapping("/updateProfile")
 	public String putEvaluator(@RequestBody Evaluatorassigned eval) {
-		evalRepo.save(eval);
-		return "Evaluator Assigned";
+		
+		return service.updateEvaluator(eval);
 		
 	}
-	
 	
 	
 }

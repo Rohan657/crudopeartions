@@ -24,5 +24,10 @@ VALUES (1,'Beaulah', '687339409','dixcy.ms'),
 	(4, 'Rohan' ,'2347944392','rohan.ahuja');
 	
 DROP TABLE IF EXISTS Evaluatorassigned;
-CREATE TABLE Evaluatorassigned(id INT PRIMARY KEY, evalname VARCHAR(250) , evalid VARCHAR(250));
+CREATE TABLE Evaluatorassigned(id BIGINT PRIMARY KEY, evalname VARCHAR(250) , evalid INT);
 INSERT INTO Evaluatorassigned (id,evalname,evalid) VALUES(1967214,'rohan',4),(1967219,'beauleah',1),(100001,'rohan',4),(1967217,'beauleah',1);
+
+
+DROP TABLE IF EXISTS Profilestatus;
+CREATE TABLE Profilestatus(id BIGINT PRIMARY KEY, status VARCHAR(250) , comments VARCHAR(250));
+INSERT INTO Profilestatus VALUES(1967214,'hired','good'),(1967219,'hired','excellent');

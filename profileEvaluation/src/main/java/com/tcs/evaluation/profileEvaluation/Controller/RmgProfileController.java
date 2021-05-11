@@ -18,7 +18,7 @@ public class RmgProfileController {
 	
 	@PostMapping("/addProfile")
 	public String addProfile(@RequestBody Profile profile) {
-		return service.postProfile(profile);
+		return service.addProfile(profile);
 	}
 
 }
